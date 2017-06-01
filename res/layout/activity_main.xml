@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res/com.example.desent"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+                android:background="@color/bg_screen1"
+>
+    <RelativeLayout android:id="@+id/toolbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+    >
+        <Spinner
+                android:id="@+id/indicator_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"/>
+        >
+        <Spinner
+                android:id="@+id/time_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"/>
+
+        <TextView android:layout_width="fill_parent"
+                  android:layout_height="40dp"
+                  android:id="@+id/caption"
+                  android:layout_below="@+id/indicator_spinner"
+                  android:gravity="center"
+                  android:paddingLeft="20dp"
+                  android:paddingRight="20dp"
+        />
+    </RelativeLayout>
+
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical"
+        android:layout_below="@+id/toolbar" android:layout_above="@+id/estimationBar" android:padding="10dp"
+                  android:id="@+id/body"
+        android:gravity="center">
+
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+                          android:id="@+id/smallIndicators"
+                          android:orientation="horizontal">
+
+                <fragment android:name="com.example.desent.fragments.CircleFragment"
+                          android:id="@+id/dailyCalories"
+                          android:layout_width="100dp"
+                          android:layout_height="100dp"
+                          android:layout_weight="1"
+                >
+                </fragment>
+
+                <fragment android:name="com.example.desent.fragments.CircleFragment"
+                          android:id="@+id/dailyExpenses"
+                          android:layout_width="100dp"
+                          android:layout_height="100dp"
+                          android:layout_weight="1"
+                >
+                </fragment>
+
+            </LinearLayout>
+            <fragment android:name="com.example.desent.fragments.CircleFragment"
+                          android:id="@+id/dailyCarbonFootprint"
+                          android:layout_width="150dp"
+                          android:layout_height="150dp"
+            >
+            </fragment>
+
+            <LinearLayout android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="10dp"
+                          android:orientation="horizontal">
+
+                <fragment android:name="com.example.desent.fragments.CategoryFragment"
+                          android:id="@+id/housing_dashboard_fragment"
+                          android:layout_height="60dp"
+                          android:layout_weight="1"
+                          android:layout_width="0dp"/>
+
+                <fragment android:name="com.example.desent.fragments.CategoryFragment"
+                          android:id="@+id/transportation_dashboard_fragment"
+                          android:layout_height="60dp"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"/>
+            </LinearLayout>
+
+            <fragment android:name="com.example.desent.fragments.WeekFragment"
+                      android:id="@+id/weeklyData"
+                      android:layout_marginTop="40dp"
+                      android:layout_marginBottom="20dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_above="@+id/estimationBar"/>
+
+            <fragment android:name="com.example.desent.fragments.MonthFragment"
+                  android:id="@+id/monthlyData"
+                  android:layout_marginTop="40dp"
+                  android:layout_marginBottom="20dp"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_above="@+id/estimationBar"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/estimationBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+        android:layout_alignParentBottom="true">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+                      android:orientation="horizontal">
+            <com.example.desent.views.EstimationButton
+                    android:id="@+id/solarPanelButton"
+                    custom:name="Solar panel"
+                    custom:category_index="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/selector_solar_panel"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:padding="0dp"
+            />
+            <com.example.desent.views.EstimationButton
+                    android:id="@+id/walkingButton"
+                    custom:name="Walking"
+                    custom:category_index="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/selector_walking"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:padding="0dp"
+            />
+            <com.example.desent.views.EstimationButton
+                    android:id="@+id/cyclingButton"
+                    custom:name="Cycling"
+                    custom:category_index="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/selector_cycling"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:padding="0dp"
+            />
+            <com.example.desent.views.EstimationButton
+                    android:id="@+id/electricCarButton"
+                    custom:name="Electric car"
+                    custom:category_index="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/selector_electric_car"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:padding="0dp"
+            />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
+
