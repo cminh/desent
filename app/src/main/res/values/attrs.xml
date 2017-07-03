@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircularIndicator">
+        <attr name="unit" format="string" />
+        <attr name="start_angle" format="integer" />
+        <attr name="sweep_angle" format="integer" />
+        <attr name="img_name" format="string" />
+        <attr name="number_of_states" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="EstimationButton">
+        <attr name="name" format="string" />
+        <attr name="category_index" format="integer" />
+    </declare-styleable>
+</resources>

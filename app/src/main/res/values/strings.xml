@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">desent</string>
+    <string-array name="time_spinner_array">
+        <item>Today</item>
+        <item>This week</item>
+        <item>This month</item>
+    </string-array>
+    <string-array name="indicator_spinner_array">
+        <item>Dashboard</item>
+        <item>Carbon footprint</item>
+        <item>Calories</item>
+        <item>Expenses</item>
+    </string-array>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Welcome!</string>
+    <string name="slide_1_desc">This app accesses to your electricity profile and follows your travels to analyze your performances.</string>
+
+    <string name="slide_2_title"></string>
+    <string name="slide_2_desc">Look at the outcomes of your energy habits.</string>
+
+    <string name="slide_3_title"></string>
+    <string name="slide_3_desc">Estimate your savings with more sustainable technologies...</string>
+
+    <string name="slide_4_title"></string>
+    <string name="slide_4_desc">... or small changes every day!</string>
+
+    <string name="slide_5_title"></string>
+    <string name="slide_5_desc">Follow your evolution during the week...</string>
+
+    <string name="slide_6_title"></string>
+    <string name="slide_6_desc">... and the month!</string>
+
+    <string name="slide_7_title">Enjoy!</string>
+</resources>
